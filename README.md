@@ -29,7 +29,7 @@ curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2mig
 ```
 
 ```
-- curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sinks/connectivity-precheck' \
+curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sinks/connectivity-precheck' \
   -H 'Content-Type: application/json' \
   -H 'header : 'Authorization: ••••••'' \
 --data '{
