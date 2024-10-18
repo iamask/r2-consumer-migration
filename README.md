@@ -5,7 +5,7 @@ Note:
 This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
 
 
-**Prerequisites** :
+**steps** :
 - Create sourceId (source) and sinkId (destination)  (using curl or postman), this is requires in index.ts for migration
 
 - [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission
@@ -37,9 +37,6 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 
 
 - Save the sourceId and sinkId from the API response to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
-
-**steps** :
-
 - Create and attach R2 event notification to the [source bucket](https://developers.cloudflare.com/r2/buckets/event-notifications/) 
 - Create a Consumer Worker and [Connect the consumer Worker to your queue ](https://developers.cloudflare.com/queues/get-started/#connect-the-consumer-worker-to-your-queue)
 
