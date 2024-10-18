@@ -1,59 +1,62 @@
-
 export default {
-	async queue(batch, env): Promise<void> {
-	  await doMigrate();
-	  console.log(batch.messages);
-	},
-  } satisfies ExportedHandler<Env>;
+    async queue(batch, env): Promise < void > {
+        await doMigrate();
+        console.log(batch.messages);
+    },
+}
+satisfies ExportedHandler < Env > ;
 
 
-  async function doMigrate(): Promise<void> {
-	const bearerToken = 'xxxxx-Xzvm5';
-	const config = {
-		"rootDirectory": "",
-		"conflictBehaviour": "skip",
-		"sinkId": "8c5222d3d-9751-4424-bd67-47f194e231321",
-		"sourceId": "10227208f-bf31-41b0-8a0c-84f321c215e"
-	  };
-	
-	const headers = {
-		'Authorization': `Bearer ${bearerToken}`,
-		'Content-Type': 'application/json'
-	  }
+async function doMigrate(): Promise < void > {
+    const bearerToken = 'xxxxx-Xzvm5';
+    const config = {
+        "rootDirectory": "",
+        "conflictBehaviour": "skip",
+        "sinkId": "8c5222d3d-9751-4424-bd67-47f194e231321",
+        "sourceId": "10227208f-bf31-41b0-8a0c-84f321c215e"
+    };
 
-	const requestOptions = {
-		method: "POST",
-		headers: headers,
-		body: JSON.stringify(config),
-	  };
+    const headers = {
+        'Authorization': `Bearer ${bearerToken}`,
+        'Content-Type': 'application/json'
+    }
+
+    const requestOptions = {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(config),
+    };
 
 
-	  
-	  interface MigrationResponse {
-		result: {
-		  id: string;
-		};
-		success: boolean;
-		errors: any[];
-		messages: any[];
-	  }
-	const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations',
-	requestOptions)
-   
-   const createMigrationsData = await createMigrations.json() as MigrationResponse;
 
-   if (createMigrationsData.success) {
-	const migrationId = createMigrationsData.result.id;
-	console.log(migrationId); // Outputs: 73293504-b3b9-4103-bdc7-bdcf263a468e
-     
-  
-	const startMigration = await fetch (`https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations/${migrationId}/lifecycle/start`,{method: "PATCH",headers: headers} )
-	const startMigrationData = await startMigration.json() as MigrationResponse;
+    interface MigrationResponse {
+        result: {
+            id: string;
+        };
+        success: boolean;
+        errors: any[];
+        messages: any[];
+    }
+    const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations',
+        requestOptions)
 
-	if(startMigrationData.success){
-    console.log("Replication done ")
-	}
-  } else {
-	console.error('Failed to create migration:', createMigrationsData.errors);
-  }
-  }
+    const createMigrationsData = await createMigrations.json() as MigrationResponse;
+
+    if (createMigrationsData.success) {
+        const migrationId = createMigrationsData.result.id;
+        console.log(migrationId); // Outputs: 73293504-b3b9-4103-bdc7-bdcf263a468e
+
+
+        const startMigration = await fetch(`https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations/${migrationId}/lifecycle/start`, {
+            method: "PATCH",
+            headers: headers
+        })
+        const startMigrationData = await startMigration.json() as MigrationResponse;
+
+        if (startMigrationData.success) {
+            console.log("Replication done ")
+        }
+    } else {
+        console.error('Failed to create migration:', createMigrationsData.errors);
+    }
+}
