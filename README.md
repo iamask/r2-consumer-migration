@@ -1,6 +1,6 @@
 Note: 
-While creating this, cross region replication feature is not yet available for Cloudflare R2
-Store secrets in [Environment variables]((https://developers.cloudflare.com/workers/configuration/environment-variables/#add-environment-variables-via-wrangler)) as best practice instead of hardcoding
+- While creating this, cross region replication feature is not yet available for Cloudflare R2
+- Store secrets in [Environment variables]((https://developers.cloudflare.com/workers/configuration/environment-variables/#add-environment-variables-via-wrangler)) as best practice instead of hardcoding
 
 This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
 
