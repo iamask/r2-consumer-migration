@@ -36,7 +36,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 }'
 
 
-- Save the sourceId and sinkId to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
+- Save the sourceId and sinkId from the API response to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
 
 **steps** :
 
