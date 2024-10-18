@@ -36,7 +36,7 @@ curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2mig
 }'
 
 ```
-- Save the sourceId and sinkId from the API response to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
+- Save the sourceId and sinkId from the API response to substitute in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
 - Create and attach R2 event notification to the [source bucket](https://developers.cloudflare.com/r2/buckets/event-notifications/) 
 - Create a Consumer Worker (git clone) and [Connect the consumer Worker to your queue ](https://developers.cloudflare.com/queues/get-started/#connect-the-consumer-worker-to-your-queue)
 
