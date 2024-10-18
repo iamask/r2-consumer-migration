@@ -1,3 +1,4 @@
+Note: While creating this, cross region replication feature is not yet available for Cloudflare R2
 
 This worker trigger [Super Slurper link ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
 
