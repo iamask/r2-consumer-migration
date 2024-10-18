@@ -37,7 +37,7 @@ async function doMigrate(): Promise < void > {
         errors: any[];
         messages: any[];
     }
-    const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations',
+    const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/migrations',
         requestOptions)
 
     const createMigrationsData = await createMigrations.json() as MigrationResponse;
@@ -47,7 +47,7 @@ async function doMigrate(): Promise < void > {
         console.log(migrationId); // Outputs: 73293504-b3b9-4103-bdc7-bdcf263a468e
 
 
-        const startMigration = await fetch(`https://api.cloudflare.com/client/v4/accounts/174f936387e2cf4c433752dc46ba6bb1/r2migrator/v1/migrations/${migrationId}/lifecycle/start`, {
+        const startMigration = await fetch(`https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/migrations/${migrationId}/lifecycle/start`, {
             method: "PATCH",
             headers: headers
         })
