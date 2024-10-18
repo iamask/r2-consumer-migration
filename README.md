@@ -4,7 +4,7 @@ This worker trigger [Super Slurper ]([url](https://developers.cloudflare.com/r2/
 
 **steps** :
 
-- Create R2 event notification on the [source bucket]([url](https://developers.cloudflare.com/r2/buckets/event-notifications/)) 
+- Create and attach R2 event notification on the [source bucket]([url](https://developers.cloudflare.com/r2/buckets/event-notifications/)) 
 - DNS
 - WAF Managed rules
 - Custom rules
