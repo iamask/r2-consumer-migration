@@ -1,4 +1,4 @@
-This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
+This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to replicate objects from source bucket to destination bucket .
 
 
 **steps** :
