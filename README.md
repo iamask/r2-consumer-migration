@@ -40,7 +40,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 
 **steps** :
 
-- Create and attach R2 event notification on the [source bucket](https://developers.cloudflare.com/r2/buckets/event-notifications/) 
+- Create and attach R2 event notification to the [source bucket](https://developers.cloudflare.com/r2/buckets/event-notifications/) 
 - Create a Consumer Worker and [Connect the consumer Worker to your queue ](https://developers.cloudflare.com/queues/get-started/#connect-the-consumer-worker-to-your-queue)
 
 
