@@ -6,29 +6,32 @@ This worker trigger [Super Slurper link ](https://developers.cloudflare.com/r2/d
 - To create sourceId (source) and sinkId (destination)  
 
 - curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
---header 'Content-Type: application/json' \
---header 'header : 'Authorization: ••••••'' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: ••••••'' \
 --data '{
-    "bucket": "sourcebucket",
+    "bucket": "source_bucket_name",
     "secret": {
         "r2AccessKeyId": "123",
         "r2SecretAccessKey": "321"
     },
     "vendor": "r2",
-    "account": "ACCOUNTID"
+    "account": "{ACCOUNTID"
 }'
 
 
 - curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sinks/connectivity-precheck' \
---header 'Content-Type: application/json' \
---header 'header : 'Authorization: ••••••'' \
+  -H 'Content-Type: application/json' \
+  -H 'header : 'Authorization: ••••••'' \
 --data '{
-    "bucket": "singapore",
+    "bucket": "destination_bucket_name",
     "secret": {
         "r2AccessKeyId": "123",
         "r2SecretAccessKey": "321"
     }
 }'
+
+
+- Save the sourceId and sinkId to be substitubed in [index.ts link](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
 
 **steps** :
 
