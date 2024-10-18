@@ -39,8 +39,7 @@ async function doMigrate(): Promise < void > {
         errors: any[];
         messages: any[];
     }
-    const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/migrations',
-        requestOptions)
+    const createMigrations = await fetch('https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/migrations',requestOptions)
 
     const createMigrationsData = await createMigrations.json() as MigrationResponse;
 
