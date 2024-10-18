@@ -6,7 +6,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 
 
 **steps** :
-- Create sourceId (source) and sinkId (destination)  (using curl or postman), this is requires in index.ts for migration
+- Create sourceId (source) and sinkId (destination)  (using curl or postman to run below API ), this is requires in index.ts for migration
 
 - [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission
 
