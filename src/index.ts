@@ -10,7 +10,7 @@ satisfies ExportedHandler < Env > ;
 async function doMigrate(): Promise < void > {
    // Account API token for firing API
     const bearerToken = 'xxxxx-Xzvm5';
-
+  //Get sinkId and sourceId using API - README.md
     const config = {
         "rootDirectory": "",
         "conflictBehaviour": "skip",
