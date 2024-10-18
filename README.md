@@ -1,6 +1,6 @@
 Note: While creating this, cross region replication feature is not yet available for Cloudflare R2
 
-This worker trigger [Super Slurper link ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
+This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-migration/super-slurper/) to trigger bucket replication from source to destination.
 
 
 **Prerequisites** :
@@ -32,7 +32,7 @@ This worker trigger [Super Slurper link ](https://developers.cloudflare.com/r2/d
 }'
 
 
-- Save the sourceId and sinkId to be substitubed in [index.ts link](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
+- Save the sourceId and sinkId to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
 
 **steps** :
 
