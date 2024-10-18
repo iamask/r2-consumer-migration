@@ -6,6 +6,8 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 **Prerequisites** :
 - To create sourceId (source) and sinkId (destination)  
 
+- [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission
+
 - curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: ••••••'' \
