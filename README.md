@@ -2,7 +2,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 
 
 **steps** :
-- Create sourceId (source) and sinkId (destination)  (use curl or postman to run below API ), this is requires in src/index.ts 
+- Create sourceId (source) and sinkId (destination)  (use curl or postman to run below API ), this is required in src/index.ts 
 
 - create [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission for api.cloudflare.com
 
