@@ -8,12 +8,12 @@ export default {
 
 
   async function doMigrate(): Promise<void> {
-	const bearerToken = 'w7dpRvION6ZpQnGJH8Es0j5cgVj8T71oQE-Xzvm5';
+	const bearerToken = 'xxxxx-Xzvm5';
 	const config = {
 		"rootDirectory": "",
 		"conflictBehaviour": "skip",
-		"sinkId": "8c522d3d-9751-4424-bd67-47f194e23130",
-		"sourceId": "1027208f-bf31-41b0-8a0c-84f3bf5c215e"
+		"sinkId": "8c5222d3d-9751-4424-bd67-47f194e231321",
+		"sourceId": "10227208f-bf31-41b0-8a0c-84f321c215e"
 	  };
 	
 	const headers = {
