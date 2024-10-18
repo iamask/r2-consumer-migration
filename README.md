@@ -44,4 +44,6 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 - Create a Consumer Worker and [Connect the consumer Worker to your queue ](https://developers.cloudflare.com/queues/get-started/#connect-the-consumer-worker-to-your-queue)
 
 
-
+Destination R2 bucket options
+Overwrite files?
+This setting determines what happens when an object being copied from the source storage bucket matches the path of an existing object in the destination R2 bucket. There are two options: overwrite and skip (this snippet uses skip)
