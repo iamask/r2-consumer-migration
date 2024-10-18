@@ -8,7 +8,9 @@ satisfies ExportedHandler < Env > ;
 
 
 async function doMigrate(): Promise < void > {
+   // Account API token for firing API
     const bearerToken = 'xxxxx-Xzvm5';
+
     const config = {
         "rootDirectory": "",
         "conflictBehaviour": "skip",
