@@ -9,7 +9,9 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 **steps** :
 - Create sourceId (source) and sinkId (destination)  (use curl or postman to run below API ), this is requires in src/index.ts 
 
-- [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission
+- create [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission for api.cloudflare.com
+
+- create [R2 API token](https://developers.cloudflare.com/r2/api/s3/tokens/) with Bucket & Object read/write permission
 
 ``` 
 curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
