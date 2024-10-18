@@ -43,6 +43,6 @@ curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2mig
 Note: 
 - While creating this, cross region replication feature is not yet available for Cloudflare R2
 - Store secrets in [Environment variables](https://developers.cloudflare.com/workers/configuration/environment-variables/#add-environment-variables-via-wrangler) as best practice instead of hardcoding
-- This will no sync deletes ; Any new files uploaded to source will be replicated to desination
+- This will not sync deletes ; Any new files uploaded to source will be replicated to desination
 - Destination R2 bucket options is not to overwrite destination files. There are two options: overwrite and skip (this snippet uses skip)
 
