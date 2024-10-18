@@ -11,7 +11,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 
 - [API token ](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)with R2 read/write permission
 
-- curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
+- ``` curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: ••••••'' \
 --data '{
@@ -21,10 +21,11 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
         "r2SecretAccessKey": "321"
     },
     "vendor": "r2",
-    "account": "{ACCOUNTID"
+    "account": "{ACCOUNTID}"
 }'
+```
 
-
+```
 - curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sinks/connectivity-precheck' \
   -H 'Content-Type: application/json' \
   -H 'header : 'Authorization: ••••••'' \
@@ -36,7 +37,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
     }
 }'
 
-
+```
 - Save the sourceId and sinkId from the API response to be substitubed in [index.ts ](https://github.com/iamask/r2-consumer-migration/blob/master/src/index.ts)
 - Create and attach R2 event notification to the [source bucket](https://developers.cloudflare.com/r2/buckets/event-notifications/) 
 - Create a Consumer Worker (git clone) and [Connect the consumer Worker to your queue ](https://developers.cloudflare.com/queues/get-started/#connect-the-consumer-worker-to-your-queue)
