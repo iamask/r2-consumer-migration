@@ -11,7 +11,7 @@ This worker trigger [Super Slurper  ](https://developers.cloudflare.com/r2/data-
 ``` 
 curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sources/connectivity-precheck' \
 -H 'Content-Type: application/json' \
--H 'Authorization: ••••••'' \
+-H 'Authorization: ••••••' \
 --data '{
     "bucket": "source_bucket_name",
     "secret": {
@@ -26,7 +26,7 @@ curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2mig
 ```
 curl --location 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNTID}/r2migrator/v1/sinks/connectivity-precheck' \
   -H 'Content-Type: application/json' \
-  -H 'header : 'Authorization: ••••••'' \
+  -H 'header : 'Authorization: ••••••' \
 --data '{
     "bucket": "destination_bucket_name",
     "secret": {
